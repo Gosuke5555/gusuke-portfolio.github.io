@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -129,30 +130,34 @@ img {
   max-width: 100%;
   height: 100vh;
   min-height: 550px;
-  position: relative;
   background-image: url(./img/fv-bgi-02.jpg);
   background-size: cover;
   background-position: center;
 }
 
+.fv-frame {
+  padding-top: 40vh;
+}
+
 .catch-copy {
-  position: absolute;
+  max-width: 600px;
+  padding: 30px;
+  margin: 0 auto;
   color: #fff;
-  left: 120px;
-  bottom: 177px;
   font-weight: bold;
+  text-align: center;
+  border: 1px solid #fff;
 }
 
 .copy-title {
   font-size: 7.0rem;
-  margin-bottom: 31px;
-  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
 }
 
 .copy-subtitle {
   font-size: 4.0rem;
   text-align: center;
-  letter-spacing: 0.1em;
 }
 
 .section-subtitle {
@@ -281,12 +286,21 @@ img {
 
 .form-label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
-.mail-img {
-  height: 16px;
+.required {
+  display: inline-block;
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  margin-left: 10px;
+  border-radius: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 input, textarea {
@@ -308,6 +322,60 @@ input, textarea {
   line-height: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.checkbox-item {
+  text-align: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-item input[type="checkbox"] + label {
+  display: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+
+.checkbox-item input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  left: 0;
+  top: 50%;
+  border: 1px solid;
+  border-color: #333333;
+  /* 枠の色変更 お好きな色を */
+  background-color: #fff;
+  /* 背景の色変更 お好きな色を */
+}
+
+.checkbox-item input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 18px;
+  height: 9px;
+  margin-top: -9px;
+  top: 50%;
+  left: 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-color: #333333;
+  /* チェックの色変更 お好きな色を */
 }
 
 .submit-btn {
@@ -340,6 +408,22 @@ input, textarea {
 }
 
 .submit-text {
+  text-align: center;
+}
+
+.end-message {
+  display: none;
+  text-align: center;
+}
+
+.false-message {
+  display: none;
+  text-align: center;
+}
+
+.last-text {
+  margin: 100px auto;
+  font-size: 3.0rem;
   text-align: center;
 }
 
@@ -463,6 +547,10 @@ input, textarea {
   }
   body.noscroll {
     overflow: hidden;
+  }
+  .fv-frame {
+    max-width: 300px;
+    margin: 0 auto;
   }
   .catch-copy {
     left: 14px;
