@@ -19,9 +19,9 @@
   <!-- header ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
   <header class="header">
     <div class="header-inner">
-      <h1 class="site-title">
+      <div class="site-title">
         <a href="./">Gosuke Portfolio</a><!-- ①サイトタイトル -->
-      </h1>
+      </div>
       <div class="nav-wrapper"><!-- ②ナビゲーションメニュー -->
         <nav class="header-nav">
           <ul class="nav-list">
@@ -46,23 +46,22 @@
   <main>
     <!-- fv -->
     <div class="fv">
-      <div class="catch-copy">
-        <h1 class="copy-title">WELCOME</h1>
-        <h2 class="copy-subtitle">Gosuke’s Portfolio</h2>
-      </div>
-      <div class="fv-img">
-        <!-- <img src="./img/fv-bgi_01@2x.jpg" alt="オフィスの様子"> -->
+      <div class="fv-frame">
+        <div class="catch-copy">
+          <h1 class="copy-title">WELCOME</h1>
+          <h2 class="copy-subtitle">Gosuke’s Portfolio</h2>
+        </div>
       </div>
     </div>
     <!-- fv -->
 
     <!-- about me -->
     <section class="section-wrapper slide-bottom show" id="about me">
-      <h3 class="section-title">About me</h3>
+      <h2 class="section-title">About me</h2>
       <div class="section-inner">
-        <h4 class="section-subtitle">
-          私のポートフォリオを<br class="br-sp">ご覧いただき<br class="br-sp">ありがとうございます。
-        </h4>
+        <h3 class="section-subtitle">
+          私のポートフォリオをご覧いただき<br class="br-sp">ありがとうございます。
+        </h3>
         <div class="profile">
           <div class="profile-text">
             はじめまして。ごすけと申します。<br>
@@ -80,7 +79,7 @@
 
     <!-- service -->
     <section class="section-wrapper slide-bottom show" id="service">
-      <h3 class="section-title text-right">Service</h3>
+      <h2 class="section-title text-right">Service</h2>
       <ul class="service-list">
         <li class="service-item">
           <p class="service-title">コーディング</ｐ>
@@ -102,7 +101,7 @@
 
     <!-- works -->
     <section class="section-wrapper slide-bottom show" id="works">
-      <h3 class="section-title">Works</h3>
+      <h2 class="section-title">Works</h2>
       <ul class="works-list">
         <li class="works-item">
           <a href="./img/works-img01.png" data-lightbox="demo" class="comp-site">
@@ -127,45 +126,79 @@
 
     <!-- contact -->
     <section class="section-wrapper" id="contact">
-      <h3 class="section-title text-right">Contact</h3>
-      <h4 class="contact-text">お気軽にご相談ください。</h4>
-      <form action="" class="form-wrapper">
+      <h2 class="section-title text-right">Contact Form</h2>
+      <h3 class="section-subtitle">
+        お気軽にご相談ください
+      </h3>
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyAAQwohpzMNaCm8La_H9w9gBsThsjoKqwXfmGdeFrXbk-LA/formResponse" class="form-wrapper" id="form">
         <ul class="form-list">
           <li class="form-item">
-            <label for="" class="form-label">お名前</label>
-            <input type="text" class="input-text">
-          </li>
-          <li class="form-item">
-              
-            <label for="" class="form-label">メールアドレス
+            <label for="" class="form-label">
+              お名前<span class="required">必須</span>
             </label>
-            <input type="text" class="input-text">
+            <input type="text" class="input-text" id="name" name="entry.96241559" required>
           </li>
           <li class="form-item">
-            <label for="" class="form-label">お問い合わせ内容</label>
-            <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+            <label for="" class="form-label">
+              メールアドレス<span class="required">必須</span>
+            </label>
+            <input type="email" class="input-text" id="email" name="entry.1707168576" required>
+          </li>
+          <li class="form-item">
+            <label for="" class="form-label">
+              お問い合わせ内容<span class="required">必須</span>
+            </label>
+            <textarea name="entry.2085190497" id="message" cols="30" rows="10" class="textarea" required></textarea>
+          </li>
+          <li class="checkbox-item">
+            <input type="checkbox" name="" class="checkbox-input" id="privacyCheck">
+            <label  class="checkbox-parts" for="privacyCheck">
+              プライバシーボリシーに同意する
+            </label>
           </li>
         </ul>
-        <input type="submit" class="submit-btn" value="Submit">
-        <p class="submit-text">※コードのみのため送信されません</p>
+        <input type="submit" class="submit-btn" value="送信する" id="js-submit" required>
+        <p class="end-message">
+          〜 送信完了 〜<br>
+          お問い合わせありがとうございました<br>
+          3営業日以内にはご連絡いたします<br>
+        </p>
+        <p class="false-message">送信失敗です</p>
       </form>
     </section>
+
+     <!-- last text -->
+     <section class="section-wrapper">
+       <h2 class="section-title text-left">
+         Lastly
+       </h2>
+       <div class=" section-inner">
+         <div class="last-text">
+           ここまでご覧いただきありがとうございました。<br>
+           クライアント様のお力になれるよう<br>
+           迅速なレスポンスと丁寧な対応をさせていただきます。
+          </div>
+       </div>
+     </section>
 
   </main>
   <!-- mainここまで ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
 
   <!-- footer ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
   <footer class="footer">
+    Gosuke Portfolio<br>
     ©2021/gosuke/All Right Reserved
   </footer>
   <!-- footerここまで ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
   
+  <!-- ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-  <script src="./js/script.js"></script>
   
+  <script src="./js/script.js"></script>
   <!-- lightbox -->
   <script src="./dist/js/lightbox-plus-jquery.min.js"></script>
-  <!-- lightboxここまで -->
 
 </body>
 </html>
