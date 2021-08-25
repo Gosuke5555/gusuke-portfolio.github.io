@@ -1,8 +1,12 @@
 @charset "UTF-8";
+
+// --------------------
+// base
+// --------------------
+
 html {
   font-size: 62.5%;
 }
-
 body {
   font-family: 'Noto Serif', 'Noto Serif JP', 'Times New Roman';
   line-height: 1.7;
@@ -10,28 +14,22 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.05em;
 }
-
 li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
-
 img {
   width: 100%;
   vertical-align: bottom;
 }
-
-.common-inner {
+.common-inner{
   max-width: 1200px;
 }
-
-.section-wrapper {
+.section-wrapper{
   padding: 100px 0;
 }
-
 .section-title {
   font-size: 6.0rem;
   font-weight: bold;
@@ -39,8 +37,7 @@ img {
   margin: 0 auto 80px;
   padding: 0 20px;
 }
-
-.section-title::after {
+.section-title::after{
   content: "";
   display: inline-block;
   background-color: #282F35;
@@ -49,371 +46,309 @@ img {
   margin-left: 30px;
   vertical-align: middle;
 }
-
-.section-inner {
+.section-inner{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
 }
-
-.bg-gray {
+.bg-gray{
   background-color: #f2f2f2;
 }
 
-.header {
+// ---------------------
+// header
+// ---------------------
+.header{
   padding: 19px 30px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 3;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   background-color: #141414;
   opacity: .9;
 }
-
-.header-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header-inner{
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .header a {
   font-style: italic;
   font-weight: bold;
   color: #fff;
-  -webkit-transition: .3s;
   transition: .3s;
 }
-
-.header a:hover {
+.header a:hover{
   opacity: .7;
-  -webkit-transition: .3s;
   transition: .3s;
   text-decoration: underline;
 }
-
-.site-title {
+.site-title{
   font-size: 2.6rem;
   font-style: italic;
   color: #fff;
 }
-
-.nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.nav-list{
   display: flex;
 }
-
-.nav-item {
+.nav-item{
   margin-right: 30px;
 }
-
-.nav-item:last-of-type {
+.nav-item:last-of-type{
   margin-right: 0;
 }
-
-.burger-btn {
+.burger-btn{
   display: none;
 }
 
+// --------------------
+// fv
+// --------------------
+
 .slider {
-  position: relative;
+  position:relative;
   z-index: 1;
   height: 100vh;
 }
 
 /*背景画像設定*/
 .slider-item01 {
-  background: url(./img/fv-bg01.jpg);
+  background:url(./img/fv-bg01.jpg);
 }
-
 .slider-item02 {
-  background: url(./img/fv-bg02.jpg);
+  background:url(./img/fv-bg02.jpg);
 }
-
 .slider-item03 {
-  background: url(./img/fv-bg03.jpg);
+  background:url(./img/fv-bg03.jpg);
 }
-
 .slider-item {
-  width: 100%;
-  /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
-  height: 100vh;
-  /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
-  background-repeat: no-repeat;
-  /*背景画像をリピートしない*/
-  background-position: center;
-  /*背景画像の位置を中央に*/
-  background-size: cover;
-  /*背景画像が.slider-item全体を覆い表示*/
+  width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;/*背景画像をリピートしない*/
+  background-position: center;/*背景画像の位置を中央に*/
+  background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
 }
 
 /*矢印の設定*/
 /*戻る、次へ矢印の位置*/
-.slick-prev,
+.slick-prev, 
 .slick-next {
-  position: absolute;
-  /*絶対配置にする*/
+    position: absolute;/*絶対配置にする*/
   z-index: 3;
-  top: 42%;
-  cursor: pointer;
-  /*マウスカーソルを指マークに*/
-  outline: none;
-  /*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid #ccc;
-  /*矢印の色*/
-  border-right: 2px solid #ccc;
-  /*矢印の色*/
-  height: 25px;
-  width: 25px;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
 }
-
-.slick-prev {
-  /*戻る矢印の位置と形状*/
-  left: 2.5%;
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
 }
-
-.slick-next {
-  /*次へ矢印の位置と形状*/
-  right: 2.5%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
 }
 
 /*ドットナビゲーションの設定*/
 .slick-dots {
   position: relative;
   z-index: 3;
-  text-align: center;
-  margin: -50px 0 0 0;
+    text-align:center;
+  margin:-50px 0 0 0;
 }
-
 .slick-dots li {
-  display: inline-block;
-  margin: 0 5px;
+    display:inline-block;
+  margin:0 5px;
 }
-
 .slick-dots button {
-  color: transparent;
-  outline: none;
-  width: 8px;
-  /*ドットボタンのサイズ*/
-  height: 8px;
-  /*ドットボタンのサイズ*/
-  display: block;
-  border-radius: 50%;
-  background: #ccc;
-  /*ドットボタンの色*/
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
 }
-
-.slick-dots .slick-active button {
-  background: #333;
-  /*ドットボタンの現在地表示の色*/
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
 }
 
 /*fvレイアウト*/
-.fv {
+.fv{
   position: relative;
 }
-
-.catch-copy {
+.catch-copy{
   position: absolute;
   z-index: 2;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   font-weight: bold;
   border: 1px solid #fff;
   padding: 60px;
-  background-color: rgba(27, 19, 16, 0.75);
+  background-color: rgba(27,19,16,0.75);
 }
-
-.copy-title {
+.copy-title{
   font-size: 4.5vw;
   margin-bottom: 20px;
 }
-
-.copy-subtitle {
+.copy-subtitle{
   font-size: 2.4vw;
 }
 
-.section-subtitle {
+// --------------------
+// about me
+// --------------------
+
+// profile
+.section-subtitle{
   text-align: center;
   font-size: 3rem;
   margin-bottom: 60px;
   font-weight: bold;
   text-decoration: underline;
 }
-
-.profile {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.profile{
+  align-items: center;
   margin-bottom: 70px;
 }
-
-.profile-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.profile-wrapper{
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
-.profile-text {
+.profile-text{
   line-height: 1.9;
   width: 45%;
 }
-
-.profile-image {
+.profile-image{
   width: 45%;
 }
-
-.skill-text {
+.skill-text{
   text-align: center;
 }
 
-.skill-list {
+// skill
+.skill-list{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
-.skill-item {
+.skill-item{
   width: 30%;
   border: 1px solid #141414;
   border-radius: 10px;
   padding: 20px 10px;
 }
-
-.skill-title {
+.skill-title{
   font-size: 2.4rem;
   text-align: center;
   font-weight: bold;
 }
-
-.skill-list-img {
+.skill-list-img{
   width: 100%;
   margin: auto;
 }
-
-.skill-list-text {
+.skill-list-text{
   padding: 0 20px;
 }
 
-.service-item {
+// --------------------
+// service
+// --------------------
+.service-item{
   width: 60%;
   background-color: #fff;
   display: block;
   border: 1px solid #141414;
   border-radius: 5px;
-  margin: 30px auto;
+  margin:30px auto;
   padding: 10px 20px;
   font-size: 2.0rem;
 }
-
-.attention {
+.attention{
   text-align: center;
 }
 
-.works-wrapper {
+// --------------------
+// works
+// --------------------
+.works-wrapper{
   margin: 0 auto;
   padding: 0 50px;
 }
-
-.grid {
-  display: -ms-grid;
+.grid{
   display: grid;
   gap: 26px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-
-.works-item {
+.works-item{
   border: 1px solid #141414;
   border-radius: 10px;
   padding: 26px;
+  a{
+    color: #141414;
+  }
+  a:hover{
+    transition: .5s;
+    opacity: .5;
+  }
+}
+.comp-site{
+  img{
+    max-width: 250px;
+    max-height: 250px;
+  }
+  p{
+    text-align: center;
+    padding-top: 20px;
+  }
 }
 
-.works-item a {
-  color: #141414;
-}
-
-.works-item a:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
-  opacity: .5;
-}
-
-.comp-site img {
-  width: 250px;
-  height: 250px;
-}
-
-.comp-site p {
-  text-align: center;
-  padding-top: 20px;
-}
-
-.contact-text {
+// --------------------
+// contact
+// --------------------
+.contact-text{
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
 }
-
-.form-wrapper {
+.form-wrapper{
   max-width: 900px;
   margin: 0 auto;
 }
-
-.form {
+.form{
   background-color: #ffffff;
   padding: 80px 0;
   border-radius: 3rem;
   margin: 0 20px;
 }
-
-.form-list {
+.form-list{
   max-width: 700px;
   margin: 0 auto 80px;
   padding: 0 50px;
 }
-
-.form-item {
+.form-item{
   margin-bottom: 25px;
 }
-
-.form-item:last-of-type {
+.form-item:last-of-type{
   margin-bottom: 0px;
 }
-
-.form-label {
+.form-label{
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
-
 .required {
   display: inline-block;
   background-color: #333333;
@@ -422,41 +357,31 @@ img {
   padding: 4px 8px;
   margin-left: 10px;
   border-radius: 0.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
-input, textarea {
+input, textarea{
   width: 100%;
   border: solid 1px #141414;
   border-radius: 0.3rem;
 }
-
-.input-text {
+.input-text{
   padding: 0px 8px;
   line-height: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-.textarea {
+.textarea{
   height: 171px;
   padding: 0px 8px;
   line-height: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-.checkbox-item {
+.checkbox-item{
   text-align: center;
 }
-
-.checkbox-item input[type="checkbox"] {
+.checkbox-item input[type="checkbox"]{
   display: none;
 }
-
-.checkbox-item input[type="checkbox"] + label {
+.checkbox-item input[type="checkbox"]+label{
   display: none;
   cursor: pointer;
   display: inline-block;
@@ -464,304 +389,315 @@ input, textarea {
   padding-left: 25px;
   padding-right: 10px;
 }
-
-.checkbox-item input[type="checkbox"] + label::before {
+.checkbox-item input[type="checkbox"]+label::before{
   content: "";
   position: absolute;
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   margin-top: -10px;
   left: 0;
   top: 50%;
   border: 1px solid;
-  border-color: #333333;
-  /* 枠の色変更 お好きな色を */
-  background-color: #fff;
-  /* 背景の色変更 お好きな色を */
+  border-color:  #333333; /* 枠の色変更 お好きな色を */
+  background-color: #fff; /* 背景の色変更 お好きな色を */
 }
-
-.checkbox-item input[type="checkbox"]:checked + label::after {
+.checkbox-item input[type="checkbox"]:checked+label::after{
   content: "";
   position: absolute;
   display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 18px;
   height: 9px;
   margin-top: -9px;
   top: 50%;
   left: 3px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   border-bottom: 3px solid;
   border-left: 3px solid;
-  border-color: #333333;
-  /* チェックの色変更 お好きな色を */
+  border-color:  #333333; /* チェックの色変更 お好きな色を */
 }
-
 .submit-btn {
   display: block;
   width: 235px;
   line-height: 60px;
   margin: 0 auto 30px;
   background-color: #f7d43f;
-  -webkit-box-shadow: 0 0 6px #1b1310;
-          box-shadow: 0 0 6px #1b1310;
+  box-shadow: 0 0 6px #1b1310;
   border-radius: 30px;
   text-align: center;
   color: #171717;
   font-weight: bold;
   text-decoration: none;
-  -webkit-transition: .3s;
   transition: .3s;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
 }
-
 .submit-btn:hover {
   opacity: .7;
-  -webkit-transition: .3s;
   transition: .3s;
   cursor: pointer;
 }
-
-.submit-text {
+.submit-text{
   text-align: center;
 }
-
 .end-message {
   display: none;
   text-align: center;
 }
-
 .false-message {
   display: none;
   text-align: center;
 }
-
-.last-text {
+// --------------------
+// last-text
+// --------------------
+.last-text{
   margin: 100px auto;
   font-size: 3.0rem;
   text-align: center;
 }
 
-.footer {
+// --------------------
+// footer
+// --------------------
+.footer{
   font-size: 1.4rem;
   text-align: center;
   padding: 30px;
   border-top: #141414 solid 1px;
 }
 
-@media screen and (min-width: 1024px) {
-  .br-sp {
+// --------------------
+// SP版改行
+// --------------------
+
+@media screen and (min-width: 1024px){
+  .br-sp{
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .section-title {
+// --------------------
+// SP
+// --------------------
+@media screen and (max-width: 768px){
+
+  // --------------------
+  // base
+  // --------------------
+  .section-title{
     font-size: 3.0rem;
     margin-bottom: 50px;
     padding-left: 0px;
   }
-  .section-title:after {
+  .section-title:after{
     width: 90px;
   }
-  .section-inner {
+  .section-inner{
     padding: 0 15px;
   }
-  .section-subtitle {
+  .section-subtitle{
     font-size: 2.0rem;
   }
-  .site-title {
+  
+  // --------------------
+  // header
+  // --------------------
+  .site-title{
     font-size: 2rem;
   }
-  .burger-btn {
-    display: block;
-    width: 39px;
+
+  // --------------------
+  // ハンバーガーメニュー
+  // --------------------
+  .burger-btn{
+    display: block;      
+    width: 39px;      
     height: 39px;
-    position: relative;
+    position: relative;      
     z-index: 3;
     background-color: transparent;
-    border: none;
-  }
-  .bar {
-    width: 30px;
-    height: 2px;
-    display: block;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background-color: #fff;
-  }
-  .bar_top {
+    border:none;    
+  }    
+  .bar{      
+    width: 30px;      
+    height: 2px;        
+    display: block;      
+    position: absolute;      
+    left: 50%;      
+    transform: translateX(-50%);      
+    background-color: #fff;    
+  }    
+  .bar_top{   
     top: 10px;
   }
-  .bar_mid {
+  .bar_mid{    
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
   }
-  .bar_bottom {
+  .bar_bottom{
     bottom: 10px;
   }
-  .burger-btn.close .bar_top {
-    -webkit-transform: translate(-50%, 10px) rotate(45deg);
-            transform: translate(-50%, 10px) rotate(45deg);
-    -webkit-transition: -webkit-transform .3s;
-    transition: -webkit-transform .3s;
-    transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s;
+
+  // --------------------
+  // ハンバーガー開いたとき
+  // --------------------
+  .burger-btn.close .bar_top{      
+    transform: translate(-50%,10px) rotate(45deg);      
+    transition: transform .3s;    
+  }    
+  .burger-btn.close .bar_mid{      
+    opacity: 0;       
+    transition: opacity .3s;    
+  }    
+  .burger-btn.close .bar_bottom{      
+  transform: translate(-50%,-8px) rotate(-45deg);      
+  transition: transform .3s;    
   }
-  .burger-btn.close .bar_mid {
-    opacity: 0;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s;
-  }
-  .burger-btn.close .bar_bottom {
-    -webkit-transform: translate(-50%, -8px) rotate(-45deg);
-            transform: translate(-50%, -8px) rotate(-45deg);
-    -webkit-transition: -webkit-transform .3s;
-    transition: -webkit-transform .3s;
-    transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s;
-  }
-  .nav-wrapper {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: .3s;
-    transition: .3s;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  .nav-wrapper{
+    transform: translateX(100%);      
+    transition: .3s;      
+    width: 100vw;      
+    height: 100vh;      
+    position: fixed;      
+    top: 0;      
+    left: 0;       
+    z-index: 2;     
     background-color: #141414;
   }
-  .nav-wrapper.slide-in {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-transition: .3s;
-    transition: .3s;
+  .nav-wrapper.slide-in{      
+    transform: translateX(0);      
+    transition: .3s;     
   }
-  .header-nav {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  .nav-list {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .nav-item {
+  .header-nav{        
+    width: 100%;        
+    height: 100%;        
+    z-index: 2;      
+  }     
+  .nav-list{        
+    display: block;        
+    position: absolute;        
+    top: 50%;        
+    left: 50%;        
+    transform: translate(-50%,-50%);        
+    text-align: center;      
+  }      
+  .nav-item{
     margin-right: 0;
     margin-bottom: 40px;
   }
-  body.noscroll {
+  body.noscroll{
     overflow: hidden;
   }
-  .fv-frame {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  .catch-copy {
-    left: 14px;
-    top: 202px;
-    text-align: center;
-  }
-  .copy-title {
-    font-size: 3.7rem;
-  }
-  .copy-subtitle {
+  
+  // --------------------
+  // fv
+  // --------------------
+
+  .copy-title{
     font-size: 3.0rem;
   }
-  .profile {
-    margin: auto;
+  .copy-subtitle{
+    font-size: 1.0rem;
   }
-  .profile-wrapper {
+
+  // --------------------
+  // about me
+  // --------------------
+  
+  // profile
+  .profile{
+    margin: 0 auto 50px;
+  }
+  .profile-wrapper{
     display: block;
   }
-  .profile-text {
+  .profile-text{
     width: 100%;
     margin: 0 auto 30px;
   }
-  .profile-image {
+  .profile-image{
     width: 100%;
     margin: auto;
   }
-  .service-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  // skill
+  .skill-list{
+    display: block;
+    padding: 20px;
   }
-  .service-item {
+  .skill-item{
     width: 100%;
     margin-bottom: 30px;
   }
-  .service-title {
-    font-size: 2rem;
+
+  // --------------------
+  // service
+  // --------------------
+  .service-list{
+    flex-direction: column;
   }
-  .service-list-img {
+  .service-item{
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 1.0rem;
+  }
+  .service-list-img{
     max-width: 320px;
     max-height: 200px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin: 0 auto;
   }
-  .service-list-img img {
+  .service-list-img img{
     height: 200px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
-  .service-list-text {
+  .service-list-text{
     max-width: 320px;
     margin: 0 auto;
   }
-  .works-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+
+  // --------------------
+  // works
+  // --------------------
+  .works-wrapper{
+    padding: 0 20px;
   }
-  .works-item {
-    max-width: 220px;
-    margin: 0 auto 30px;
+
+  .comp-site p{
+    font-size: 1.2rem;
   }
-  .comp-site img {
-    max-width: 220px;
-  }
-  .contact-text {
+
+  // --------------------
+  // contact
+  // --------------------
+  .contact-text{
     font-size: 2rem;
     text-align: center;
   }
-  .form-list {
+  .form-list{
     padding: 0 15px;
   }
-  .last-text {
+  .checkbox-parts{
+    font-size: 1.0rem;
+  }
+
+  // --------------------
+  // contact
+  // --------------------
+  .last-text{
     font-size: 2.0rem;
     text-align: left;
   }
 }
 
+// --------------------
+// スクロール&フェードイン
+// --------------------
 .slide-bottom {
   opacity: 0;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  -webkit-transition: all 2.0s 0s ease-out;
+  transform: translateY(20px);
   transition: all 2.0s 0s ease-out;
 }
-/*# sourceMappingURL=style.css.map */
