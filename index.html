@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <!-- header ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+  <!-- ========== header ========== -->
   <header class="header">
     <div class="header-inner">
       <div class="site-title">
@@ -40,162 +40,215 @@
     </div>
 
   </header>
-  <!-- headerここまで ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+  <!-- ========== //header ========== -->
 
-  <!-- main ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+  <!-- ========== main ========== -->
   <main>
     <!-- fv -->
     <div class="fv">
-      <div class="fv-frame">
-        <div class="catch-copy">
-          <h1 class="copy-title">WELCOME</h1>
-          <h2 class="copy-subtitle">Gosuke’s Portfolio</h2>
-        </div>
+      <div class="catch-copy">
+        <h1 class="copy-title">Gosuke Portfolio</h1>
+        <pclass="copy-subtitle">〜 Making your Website 〜</pclass=>
       </div>
+      <ul class="slider">
+        <li class="slider-item slider-item01"></li>
+        <li class="slider-item slider-item02"></li>
+        <li class="slider-item slider-item03"></li>
+      </ul>
     </div>
     <!-- fv -->
 
     <!-- about me -->
     <section class="section-wrapper slide-bottom show" id="about me">
-      <h2 class="section-title">About me</h2>
       <div class="section-inner">
-        <h3 class="section-subtitle">
-          私のポートフォリオをご覧いただき<br class="br-sp">ありがとうございます。
-        </h3>
+        <h2 class="section-title">About me</h2>
+        <!-- profile -->
         <div class="profile">
-          <div class="profile-text">
-            はじめまして。ごすけと申します。<br>
-            この度は私のポートフォリをご覧いただきありがとうございます。<br>
-            デザインカンプからのコーディング、アニメーションの実装を承っています。<br>
-            「HP/Webサイト/LPを作って欲しい」というお問合せから、
-            このポートフォリオに対するご意見・ご感想まで何でも承りますので、お気軽にご連絡ください。
+          <p class="section-subtitle">Profile</p>
+          <div class="profile-wrapper">
+            <div class="profile-text">
+              はじめまして。ごすけと申します。<br>
+              WEB制作を中心にフリーランスとして活動しています。<br><br>
+              HP/Webサイト/LP制作のお問合せから、<br>
+              このポートフォリオに対するご意見・ご感想まで<br>
+              何でも承りますので、お気軽にご連絡ください。<br><br>
+              ◆ Birthday：1989.08.14<br>
+              ◆ Blog：<a href="https://gsukesan.com">https://gsukesan.com</a>
+            </div>
+            <div class="profile-image">
+              <img src="./img/profile_01.JPG" alt="">
+            </div>
           </div>
-          <div class="profile-image">
-            <img src="./img/profile_01.JPG" alt="">
+        </div>
+        <!-- skill -->
+        <div class="my-skill">
+          <p class="section-subtitle">Skill</p>
+          <div class="slill-wrapper">
+            <ul class="skill-list">
+              <li class="skill-item">
+                <p class="skill-title">コーディング</ｐ>
+                  <div class="skill-list-img"><img src="./img/service-img01.png" alt=""></div>
+                  <p class="skill-list-text">HTML&CSS、JavaScript(jQuery)を使ったコーディング</p>
+                </li>
+                <li class="skill-item">
+                  <p class="skill-title">LP制作</p>
+                  <div class="skill-list-img"><img src="./img/service-img02.png" alt=""></div>
+                  <p class="skill-list-text">デザインデータを元にしたLP制作、企業サイト制作</p>
+                </li>
+                <li class="skill-item">
+                  <p class="skill-title">レスポンシブ対応</p>
+                  <div class="skill-list-img"><img src="./img/service-img03.png" alt=""></div>
+                  <p class="skill-list-text">スマートフォン・タブレット表示に対応したサイト制作</p>
+                </li>
+              </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- service -->
-    <section class="section-wrapper slide-bottom show" id="service">
-      <h2 class="section-title text-right">Service</h2>
-      <ul class="service-list">
-        <li class="service-item">
-          <p class="service-title">コーディング</ｐ>
-          <div class="service-list-img"><img src="./img/service-img01.png" alt=""></div>
-          <p class="service-list-text">HTML&CSS、JavaScript(jQuery)を使ったコーディング</p>
-        </li>
-        <li class="service-item">
-          <p class="service-title">LP制作</p>
-          <div class="service-list-img"><img src="./img/service-img02.png" alt=""></div>
-          <p class="service-list-text">デザインデータを元にしたLP制作、企業サイト制作</p>
-        </li>
-        <li class="service-item">
-          <p class="service-title">レスポンシブ対応</p>
-          <div class="service-list-img"><img src="./img/service-img03.png" alt=""></div>
-          <p class="service-list-text">スマートフォン・タブレット表示に対応したサイト制作</p>
-        </li>
-      </ul>
+    <section class="section-wrapper slide-bottom show bg-gray" id="service">
+      <div class="section-inner">
+        <h2 class="section-title">Service</h2>
+        <div class="price">
+          <p class="section-subtitle">制作までの流れ</p>
+          <ul class="service-list">
+            <li class="service-item">① 打ち合わせ（メール、Zoom、Chatwork対応します）</li>
+            <li class="service-item">② 各ページのデザイン・コンテンツ配置を確認</li>
+            <li class="service-item">③ コーディング〜ブラウザ検証</li>
+            <li class="service-item">④ 納品確認</li>
+            <li class="service-item">⑤ 修正等がなければ検収</li>
+          </ul>
+          <p class="attention">※デザインの大幅な変更などがあれば別途費用が発生します</p>
+        </div>
+      </div>
     </section>
-
+    <!-- //service -->
+        
     <!-- works -->
     <section class="section-wrapper slide-bottom show" id="works">
-      <h2 class="section-title">Works</h2>
-      <ul class="works-list">
-        <li class="works-item">
-          <a href="./img/works-img01.png" data-lightbox="demo" class="comp-site">
-            <img src="./img/works-img-s01.png" alt="">
-            <p class="works-list-text">カンプからのコーディング①</p>
-          </a>
-        </li>
-        <li class="works-item">
-          <a href="./img/works-img02.jpg" data-lightbox="demo" class="comp-site">
-            <img src="./img/works-img-s02.jpg" alt="">
-            <p class="works-list-text">カンプからのコーディング②</p>
-          </a>
-        </li>
-        <li class="works-item">
-          <a href="./img/works-img03.png" data-lightbox="demo" class="comp-site">
-            <img src="./img/works-img-s03.png" alt="">
-            <p class="works-list-text">カンプからのコーディング③</p>
-          </a>
-        </li>
-      </ul>
+      <div class="section-inner">
+        <h2 class="section-title">Works</h2>
+        <div class="works">
+          <p class="section-subtitle">ポートフォリオ</p>
+          <div class="works-wrapper grid">
+            <div class="works-item">
+              <a href="./img/works-img01.png" data-lightbox="demo" class="comp-site">
+                <img src="./img/works-img-s01.png" alt="">
+                <p>カンプからのコーディング①</p>
+              </a>
+            </div>
+            <div class="works-item">
+              <a href="./img/works-img02.jpg" data-lightbox="demo" class="comp-site">
+                <img src="./img/works-img-s02.jpg" alt="">
+                <p>カンプからのコーディング②</p>
+              </a>
+            </div>
+            <div class="works-item">
+              <a href="./img/works-img03.png" data-lightbox="demo" class="comp-site">
+                <img src="./img/works-img-s03.png" alt="">
+                <p>カンプからのコーディング③</p>
+              </a>
+            </div>
+            <div class="works-item">
+              <a href="./img/works-img04.png" data-lightbox="demo" class="comp-site">
+                <img src="./img/works-img-s04.png" alt="">
+                <p>カンプからのコーディング④</p>
+              </a>
+            </div>
+            <div class="works-item">
+              <a href="./img/works-img05.png" data-lightbox="demo" class="comp-site">
+                <img src="./img/works-img-s05.png" alt="">
+                <p>カンプからのコーディング⑤</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
+    <!-- //works -->
+      
     <!-- contact -->
-    <section class="section-wrapper" id="contact">
-      <h2 class="section-title text-right">Contact Form</h2>
-      <h3 class="section-subtitle">
-        お気軽にご相談ください
-      </h3>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyAAQwohpzMNaCm8La_H9w9gBsThsjoKqwXfmGdeFrXbk-LA/formResponse" class="form-wrapper" id="form">
-        <ul class="form-list">
-          <li class="form-item">
-            <label for="" class="form-label">
-              お名前<span class="required">必須</span>
-            </label>
-            <input type="text" class="input-text" id="name" name="entry.96241559" required>
-          </li>
-          <li class="form-item">
-            <label for="" class="form-label">
-              メールアドレス<span class="required">必須</span>
-            </label>
-            <input type="email" class="input-text" id="email" name="entry.1707168576" required>
-          </li>
-          <li class="form-item">
-            <label for="" class="form-label">
-              お問い合わせ内容<span class="required">必須</span>
-            </label>
-            <textarea name="entry.2085190497" id="message" cols="30" rows="10" class="textarea" required></textarea>
-          </li>
-          <li class="checkbox-item">
-            <input type="checkbox" name="" class="checkbox-input" id="privacyCheck">
-            <label  class="checkbox-parts" for="privacyCheck">
-              プライバシーボリシーに同意する
-            </label>
-          </li>
-        </ul>
-        <input type="submit" class="submit-btn" value="送信する" id="js-submit" required>
-        <p class="end-message">
-          〜 送信完了 〜<br>
-          お問い合わせありがとうございました<br>
-          3営業日以内にはご連絡いたします<br>
-        </p>
-        <p class="false-message">送信失敗です</p>
-      </form>
-    </section>
+    <section class="section-wrapper bg-gray" id="contact">
+      <div class="section-inner">
 
+        <h2 class="section-title text-right">Contact Form</h2>
+        <h3 class="section-subtitle">
+          お気軽にご相談ください
+        </h3>
+        <div class="form-wrapper">
+          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyAAQwohpzMNaCm8La_H9w9gBsThsjoKqwXfmGdeFrXbk-LA/formResponse"  id="form" class="form">
+            <ul class="form-list">
+              <li class="form-item">
+                <label for="" class="form-label">
+                  お名前<span class="required">必須</span>
+                </label>
+                <input type="text" class="input-text" id="name" name="entry.96241559" required>
+              </li>
+              <li class="form-item">
+                <label for="" class="form-label">
+                  メールアドレス<span class="required">必須</span>
+                </label>
+                <input type="email" class="input-text" id="email" name="entry.1707168576" required>
+              </li>
+              <li class="form-item">
+                <label for="" class="form-label">
+                  お問い合わせ内容<span class="required">必須</span>
+                </label>
+                <textarea name="entry.2085190497" id="message" cols="30" rows="10" class="textarea" required></textarea>
+              </li>
+              <li class="checkbox-item">
+                <input type="checkbox" name="" class="checkbox-input" id="privacyCheck">
+                <label  class="checkbox-parts" for="privacyCheck">
+                  プライバシーボリシーに同意する
+                </label>
+              </li>
+            </ul>
+            <input type="submit" class="submit-btn" value="送信する" id="js-submit" required>
+            <p class="end-message">
+              〜 送信完了 〜<br>
+              お問い合わせありがとうございました<br>
+              3営業日以内にはご連絡いたします<br>
+            </p>
+            <p class="false-message">送信失敗です</p>
+          </form>
+        </div>
+      </div>
+      </section>
+      
      <!-- last text -->
      <section class="section-wrapper">
-       <h2 class="section-title text-left">
-         Lastly
-       </h2>
-       <div class=" section-inner">
-         <div class="last-text">
-           ここまでご覧いただきありがとうございました。<br>
-           クライアント様のお力になれるよう<br>
-           迅速なレスポンスと丁寧な対応をさせていただきます。
+       <div class="section-inner">
+         <h2 class="section-title text-left">
+           Lastly
+          </h2>
+          <div class=" section-inner">
+            <div class="last-text">
+              ここまでご覧いただき<br class="br-sp">ありがとうございました。<br>
+              クライアント様のお力になれるよう<br>
+              迅速なレスポンスと丁寧な対応を<br class="br-sp">させていただきます。
+            </div>
           </div>
-       </div>
-     </section>
-
+        </div>
+      </section>
+        
   </main>
-  <!-- mainここまで ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
-
-  <!-- footer ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+  <!-- =========== //mainここまで ========== -->
+      
+  <!-- ========== footer ========== -->
   <footer class="footer">
     Gosuke Portfolio<br>
     ©2021/gosuke/All Right Reserved
   </footer>
-  <!-- footerここまで ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+  <!-- ========== footer ========== -->
   
   <!-- ajax -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
+  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-  
+  <!-- slick -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- JSファイル読み込み -->
   <script src="./js/script.js"></script>
   <!-- lightbox -->
   <script src="./dist/js/lightbox-plus-jquery.min.js"></script>
